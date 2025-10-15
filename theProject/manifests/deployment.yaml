@@ -14,4 +14,7 @@ spec:
     spec:
       containers:
         - name: the-project
-          image: nikhilwithdocker/the-project:v1
+          image: nikhilwithdocker/the-project:v2
+          env:
+          - name: PORT
+            value: "7007"
