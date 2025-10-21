@@ -1,3 +1,7 @@
+const express = require("express")
+const dotenv = require("dotenv");
+dotenv.config();
+const app = express();
 const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
 
 const randomGen = (str = "") => {
@@ -13,8 +17,12 @@ const randomGen = (str = "") => {
 };
 
 const randomStr = randomGen();
-console.log(`${new Date().toISOString()}: ${randomStr}`);
+const port = process.env.PORT;
 
-setInterval(() => {
-  console.log(`${new Date().toISOString()}: ${randomStr}`);
-}, 5000);
+app.get("/", (_, res) => {
+  res.send(randomStr);
+})
+
+app.listen(port, () => {
+  console.log(`listening on port ${port}`)
+})
