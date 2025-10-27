@@ -20,3 +20,10 @@ spec:
             name: pingpong-svc
             port:
               number: 1234
+      - path: /content
+        pathType: Prefix
+        backend:
+          service:
+            name: logoutput-svc
+            port:
+              number: 2345

@@ -12,9 +12,20 @@ spec:
       labels:
         app: log-output
     spec:
+      volumes:
+        - name: shared-image
+          emptyDir: {}
       containers:
-        - name: log-output
-          image: nikhilwithdocker/log-output:v2
+        - name: log-output-server
+          image: nikhilwithdocker/logoutputserver:v2
           env:
             - name: PORT
               value: "6006"
+          volumeMounts:
+          - name: shared-image
+            mountPath: /usr/src/app/files
+        - name: log-output-system
+          image: nikhilwithdocker/logoutputsystem:v2
+          volumeMounts:
+          - name: shared-image
+            mountPath: /usr/src/app/files
