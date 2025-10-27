@@ -13,6 +13,8 @@
 - [1.7.](https://github.com/h4r0015k/devops-with-kubernetes/tree/1.7/logOutput)
 - [1.8.](https://github.com/h4r0015k/devops-with-kubernetes/tree/1.8/theProject)
 - [1.9.](https://github.com/h4r0015k/devops-with-kubernetes/tree/1.9/pingPong)
+- [1.10.](https://github.com/h4r0015k/devops-with-kubernetes/tree/1.10/logOutput)
+
 
 
 
